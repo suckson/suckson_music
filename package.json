@@ -1,0 +1,104 @@
+{
+  "name": "suckson_music",
+  "version": "1.0.0",
+  "description": "a simple magic and easy to use music website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "coverage": "jest --coverage",
+    "clear:dist": "rimraf dist",
+    "dev": "webpack-dev-server --progress --config configs/webpack.dev.js",
+    "build": "npm run clear:dist && webpack --progress --config configs/webpack.prod.js",
+    "build:demo": "npm run clear:public && webpack --progress --config configs/webpack.demo.js",
+    "build:server": "webpack --progress --config configs/webpack.server.js",
+    "start": "npm run build:demo && npm run build:server && node ./cool-player/server.js"
+  },
+  "homepage": "https://github.com/neroneroffy/react-music-player",
+  "bugs": {
+    "url": "https://github.com/neroneroffy/react-music-player/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Suckson"
+  },
+  "dependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.16",
+    "@types/react-addons-css-transition-group": "^15.0.5",
+    "@types/react-dom": "^16.9.4",
+    "classnames": "^2.2.6",
+    "react": "^16.12.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "@testing-library/jest-dom": "^5.0.2",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "autoprefixer": "^9.7.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "express": "^4.17.1",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "jest": "^24.9.0",
+    "jest-environment-jsdom-fourteen": "0.1.0",
+    "jest-enzyme": "^7.1.2",
+    "jest-react": "^0.10.0",
+    "jest-resolve": "^25.1.0",
+    "jest-watch-typeahead": "^0.4.2",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "react-app-polyfill": "^1.0.5",
+    "rimraf": "^3.0.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "terser-webpack-plugin": "^2.3.5",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0",
+    "react-addons-css-transition-group": ">=15.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "keywords": [
+    "music",
+    "react",
+    "reactjs",
+    "player",
+    "magic",
+    "audio-player"
+  ],
+  "author": "suckson",
+  "license": "MIT"
+}
