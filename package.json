@@ -22,6 +22,8 @@
     "url": "https://github.com/Suckson"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@types/classnames": "^2.2.9",
     "@types/react": "^16.9.16",
     "@types/react-addons-css-transition-group": "^15.0.5",
